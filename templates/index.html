@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Checkerboard</title>
+</head>
+<style>
+    .light{
+        background-color: {{color1}};
+    }
+    
+    .dark{
+        background-color: {{color2}};
+    }
+</style>
+<body>
+    <div>
+        <h1>***Checkerboard***</h1>
+    </div>
+    {% for x in range(0,x,2): %}
+    <table>
+        <tr>
+            {% for x in range(0,y,2): %}
+            <td class = "light square"></td>
+            <td class = "dark square"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for x in range(0,y,2): %}
+            <td class = "dark square"></td>
+            <td class = "light square"></td>
+            {% endfor %}
+        </tr>
+    </table>
+    {% endfor %}
+</body>
+</html>

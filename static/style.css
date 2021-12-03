@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+}
